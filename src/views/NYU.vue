@@ -4,8 +4,8 @@
         <p>Here you can find some of my school files hosted.</p>
         <!-- Add your HTML files in the public folder and link them here -->
         <ul>
-            <li><a href="/public/file1.html" target="_blank">File 1</a></li>
-            <li><a href="/public/file2.html" target="_blank">File 2</a></li>
+            <li><a href="/241125_detailed_proposal.html" target="_blank">Creative Computing Final Proposal</a></li>
+            <li><a href="/hypercinema_final_project_proposal.html" target="_blank">Hypercinema Final Proposal</a></li>
             <li><a href="/public/file3.html" target="_blank">File 3</a></li>
         </ul>
     </div>
