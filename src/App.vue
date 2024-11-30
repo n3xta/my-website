@@ -4,6 +4,9 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
+  <footer>
+      This website is under construction
+    </footer>
 </template>
 
 <style>
@@ -26,5 +29,12 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  color: #666;
+  font-size: 0.9em;
 }
 </style>
