@@ -6,7 +6,7 @@
         <ul>
             <li><a href="/241125_detailed_proposal.html" target="_blank">Creative Computing Final Proposal</a></li>
             <li><a href="/hypercinema_final_project_proposal.html" target="_blank">Hypercinema Final Proposal</a></li>
-            <li><a href="/public/file3.html" target="_blank">File 3</a></li>
+            <li><a href="/Chance_Me_Documentation.html" target="_blank">"Chance Me" Documentation</a></li>
         </ul>
     </div>
 </template>
