@@ -1,0 +1,391 @@
+<!DOCTYPE html><html><head>
+      <title>Chance_Me_Documentation</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/SourceSans3-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/GeistMono-VariableFont_wght.ttf") format("truetype");
+}
+/* Apply the fonts */
+.markdown-preview.markdown-preview {
+  color: black;
+  font-family: "Source Sans 3", sans-serif;
+}
+.markdown-preview.markdown-preview h1 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 800;
+}
+.markdown-preview.markdown-preview h2 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+}
+.markdown-preview.markdown-preview h3 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+}
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5,
+.markdown-preview.markdown-preview h6,
+.markdown-preview.markdown-preview blockquote {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.markdown-preview.markdown-preview pre {
+  font-family: "Source Sans 3", sans-serif;
+}
+.markdown-preview.markdown-preview code {
+  font-family: "Geist Mono", sans-serif;
+  color: lightgray;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#chance-me-documentation">"Chance Me" (Documentation)</a>
+<ul>
+<li><a href="#1-the-spark">1. The Spark</a></li>
+<li><a href="#2-the-concept">2. The Concept</a></li>
+<li><a href="#3-the-craft">3. The Craft</a>
+<ul>
+<li><a href="#31-source-code-is-available-here">3.1. Source code is available here</a></li>
+<li><a href="#32-code-walkthrough">3.2. Code Walkthrough</a>
+<ul>
+<li><a href="#321-html-walkthrough">3.2.1. HTML Walkthrough</a></li>
+<li><a href="#322-css-highlights">3.2.2. CSS Highlights</a></li>
+<li><a href="#323-javascript-walkthrough">3.2.3. JavaScript Walkthrough</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4-the-struggle">4. The Struggle</a></li>
+<li><a href="#5-the-audience">5. The Audience</a></li>
+<li><a href="#6-exhibition">6. Exhibition</a></li>
+<li><a href="#7-the-next-step">7. The Next Step</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="chance-me-documentation">"Chance Me" (Documentation) </h1>
+<h2 id="1-the-spark">1. The Spark </h2>
+<blockquote>
+<p>I stand in the corridor of calculations,<br>
+My spine a row of digits pinned to a silent wall.</p>
+</blockquote>
+<p>The initial inspiration stems from a profound anxiety about being “dimensionalized.” I’m constantly cut into pieces by scores, rankings, metrics, and charts, as if every aspect of life must be quantified by external data. Especially during college application season, as I repeatedly scrolled through “Chance Me” posts and content on the A2C subreddit (Applying to College), I felt myself reduced to a sequence of parameters. SAT scores, GPA, activity lists, percentile ranks—these data points scattered across my digital file, while I gradually lost sight of the emotions and self that lie behind those numbers.</p>
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/6a0fdf6866ceea84bc70a8cae58c214.png">
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/202412101446496.png">
+<p>During application season, I was basically addicted to browsing A2C, irresponsibly ensuring I never missed a single hot post. Every morning, the first thing I did was check my Gmail, which was stuffed with spammy emails from various schools and institutions, hoping to see any new updates. The second thing was to open A2C. In Shanghai, I spent about 40 minutes commuting each day, and almost all those 40 minutes were devoted to checking A2C. I couldn’t see myself anymore; I could only rely on this system to continually triangulate my position. In truth, I felt the cold, indifferent gaze of data. Those line charts, distributions, and color blocks flashed on the screen, seemingly concerned only with “productivity” and “efficiency,” ignoring the complexity of me as a human being. This austere “data visualization” made me wonder: In the education and self-evaluation systems, how exactly are we shaped by scores and algorithms?</p>
+<p>I want this work to speak to those who find themselves wandering through this process. I hope to connect with people trapped between the need for external validation and the loss of an internal voice. When they stand before a camera and sense the artwork detecting and scoring their posture, will they recognize the absurdity of it? Perhaps this predicament isn’t mine alone. It could be a collective metaphor for our era.</p>
+<h2 id="2-the-concept">2. The Concept </h2>
+<p>Key themes: Self, Evaluation, Scores, Algorithms, Absurdity, Technology &amp; Humanity.<br>
+I considered “Dimensionalized” or “Chance Me” as a title. The former highlights the sense of infinite fragmentation into dimensions, while the latter resonates with the self-quantification requests on college application forums. Ultimately, I lean towards “Chance Me” because it aligns better with the chosen style and is more direct.</p>
+<p>The core question of the piece: When every evaluation is translated into scores and parameters, does our self still exist beyond those numbers? When viewers approach the camera and see the system assigning them an unstable, flickering score, I hope they feel a mix of humor and discomfort. They might ask themselves: Why are we so fixated on using numbers and algorithms to measure human worth?</p>
+<h2 id="3-the-craft">3. The Craft </h2>
+<blockquote>
+<p>My form collapses into a grid,<br>
+Coordinates and confidence scores replacing skin and bone.</p>
+</blockquote>
+<p><strong>Rationale for Technical Choices:</strong></p>
+<ul>
+<li>Using a webcam and pose detection was intended so that as soon as the viewer’s body enters the artwork’s field of view, it is immediately captured and judged. This represents yet another form of “dimensionalizing” people. Through the ml5.js BodyPose model, the human figure is broken down into a set of coordinates and confidence values, enabling the piece to “infer” an absurd score from the viewer’s posture.</li>
+<li>The flickering score is meant to convey instability and absurdity. The numbers flash and change randomly, constantly reminding viewers of the inherent ridiculousness of this rating process.</li>
+</ul>
+<p><strong>Implementation Details:</strong></p>
+<ul>
+<li><strong>Technology Stack:</strong> A front-end setup with HTML/CSS/JS, using ml5.js for pose detection. The layout employs a bento-grid pattern with CSS Grid, arranging information-dense modules side by side.</li>
+<li><strong>Challenges:</strong> Pose detection accuracy poses a key difficulty. Thresholding and smoothing may be required to avoid jittery keypoints that disrupt the viewing experience. Moreover, ensuring stable performance across different devices and network conditions is crucial. The flickering effect is achieved by periodically updating numbers with JavaScript and controlling the blinking tempo via CSS transitions.</li>
+</ul>
+<p><strong>Significance:</strong></p>
+<ul>
+<li>By leveraging pose detection, the technology itself becomes part of the artwork’s metaphor. The viewer’s posture is transformed into numerical data, automatically parsed by an algorithm and then represented as a score—a direct reflection of the idea of being “dimensionalized.”</li>
+<li>This interactive element naturally integrates into the artistic narrative: as viewers watch the screen and try to decipher the constantly shifting numbers, they themselves become part of the piece, also being “quantified” by it. The resulting discomfort and sense of being surveilled effectively convey the satire of being evaluated by algorithms.</li>
+</ul>
+<h3 id="31-source-code-is-available-here">3.1. Source code is available here </h3>
+<p><a href="https://github.com/n3xta/fall2024-creative-computing-final">https://github.com/n3xta/fall2024-creative-computing-final</a></p>
+<p><strong>Coding is fun:</strong></p>
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/202412101504822.png">
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/202412101504364.png">
+<h3 id="32-code-walkthrough">3.2. Code Walkthrough </h3>
+<p>My code sets up a webpage that captures user video input, detects body keypoints (like the right eye or left shoulder) using <code>ml5.js</code> (which is built atop TensorFlow.js), and then dynamically generates and displays a “report” with fictional demographic and academic data. The layout uses a <strong>bento-grid</strong> pattern to show cropped sections of the video feed that correspond to specific body parts.</p>
+<p>Over time, as the user appears in front of the camera and certain conditions are met (like the right eye being detected), the script generates a random profile and "chance percentage." The styling is intentionally minimalist (black and white) to maintain an unsettling, data-driven atmosphere while the textual content—awards, extracurriculars, ethnicities, etc.—is all fictional and absurd, emphasizing the arbitrary nature of such “dimensionalized” evaluation.</p>
+<h4 id="321-html-walkthrough">3.2.1. HTML Walkthrough </h4>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>
+<p>Use of <code>&lt;script&gt;</code> tags loading external libraries: <code>p5.js</code>, <code>p5.sound.js</code>, <code>ml5.js</code> for machine learning, and <code>d3.js</code> for data manipulation.</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/ml5@1/dist/ml5.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/d3@7<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li>
+<p>Custom fonts are loaded, including <code>'Funnel Display'</code> from a remote URL and <code>'Courier Prime'</code> from Google Fonts. The chosen fonts, often monospaced or minimalist, enhance the “technical dossier” vibe.</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+@font-face {
+  font-family: 'Funnel Display';
+  src: url('...FunnelDisplay-VariableFont_wght.ttf') format('truetype');
+}
+</code></pre></li>
+<li>
+<p>The <code>main</code> section houses three primary areas:</p>
+<ol>
+<li><strong><code>#report1</code></strong> on the left</li>
+<li>The <strong><code>.bento-grid-wrapper</code></strong> (with <code>.bento-grid</code>) in the middle</li>
+<li><strong><code>#report2</code></strong> on the right<br>
+Below them is the <code>#chances</code> section, displaying a dynamic percentage.</li>
+</ol>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>report1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>background<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>academic-stats<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bento-grid-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bento-grid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token comment">&lt;!-- Multiple &lt;canvas&gt; elements to draw cropped video parts --&gt;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      ...
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>report2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>awards<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>extracurriculars<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>essays<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chances<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Stop Asking. You’re at <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chance-percentage<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>--%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li>
+<p>The “border” area uses scrolling text in fixed positions around the edges:</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>border</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>scrolling-text top<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>CHANCE ME! <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>scrolling-text bottom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>CHANCE ME! <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>scrolling-text left<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>CHANCE ME! <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>scrolling-text right<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>CHANCE ME! <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>border</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li>
+<p>Scripts <code>gsap.min.js</code> and <code>TextPlugin.min.js</code> are included at the end for smooth text animations.</p>
+</li>
+</ul>
+<h4 id="322-css-highlights">3.2.2. CSS Highlights </h4>
+<ul>
+<li>
+<p><strong>Reset and box-sizing:</strong> my code sets <code>* { box-sizing: border-box; }</code> and removes margins and paddings from all elements for a clean slate.</p>
+</li>
+<li>
+<p><strong>Black-and-white style:</strong><br>
+The background is black, text is mostly white or grayscale. This aesthetic helps emphasize the data-driven, disconcerting environment.</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token color">black</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode color">#333</span><span class="token punctuation">;</span> <span class="token comment">/* Foreground text colors vary but are muted */</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+<li>
+<p><strong>Layout:</strong><br>
+A CSS Grid layout defines <code>main</code> with 3 columns and a row for the “chances” section:</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token selector">main</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-areas</span><span class="token punctuation">:</span> 
+  <span class="token string">'left middle right'</span>
+  <span class="token string">'chances chances chances'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+<li>
+<p><strong>Bento grid:</strong><br>
+The <code>.bento-grid</code> uses a carefully defined <code>grid-template-areas</code> to produce a structured but complex layout. Each <code>.container</code> is assigned to a <code>boxN</code> area. This gives a patchwork-like feel, reminiscent of dashboards.</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token selector"><span class="token class">.bento-grid</span></span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-areas</span><span class="token punctuation">:</span> 
+    <span class="token string">'box1 box2 box2 box3'</span>
+    ...
+    <span class="token string">'box4 box7 box8 box8'</span>
+    <span class="token string">'box4 box7 box8 box8'</span>
+    <span class="token string">'box4 box7 box8 box8'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+</ul>
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/202412101509102.png">
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/202412101509786.png">
+<ul>
+<li>
+<p><strong>Canvas styling:</strong><br>
+Each canvas is set to <code>width:100%; height:100%;</code> and <code>filter: saturate(0);</code> to ensure the video snapshots appear grayscale.</p>
+</li>
+<li>
+<p><strong>Scrolling text:</strong><br>
+<code>.scrolling-text</code> positioned on each edge of the screen, creating a continuous “CHANCE ME!” marquee. This calls attention to the repetitive, almost mocking nature of the experience.</p>
+</li>
+</ul>
+<h4 id="323-javascript-walkthrough">3.2.3. JavaScript Walkthrough </h4>
+<p><strong>Key Libraries:</strong> <code>ml5.js</code> for pose detection, <code>p5.js</code> for capturing and drawing video, <code>gsap</code> for text animations.</p>
+<p><strong>Key Classes and Variables:</strong></p>
+<ul>
+<li><code>bodyPose</code> is the ml5 bodyPose model instance.</li>
+<li><code>reportGenerated</code> tracks if a report is currently shown.</li>
+<li><code>VideoCanvas</code> class encapsulates logic for rendering a cropped portion of the video stream onto a <code>&lt;canvas&gt;</code> element based on a specified keypoint.</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript js"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">VideoCanvas</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">canvasId<span class="token punctuation">,</span> keypointName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span><span class="token property-access">canvas</span> <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span>canvasId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span><span class="token property-access">ctx</span> <span class="token operator">=</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span><span class="token property-access">canvas</span><span class="token punctuation">.</span><span class="token method function property-access">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span><span class="token property-access">keypointName</span> <span class="token operator">=</span> keypointName<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">draw</span><span class="token punctuation">(</span><span class="token parameter">video<span class="token punctuation">,</span> poses</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Finds the specified keypoint and draws a cropped section of the video</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Setup and Pose Detection:</strong></p>
+<ul>
+<li><code>preload()</code> loads the bodyPose model.</li>
+<li><code>setup()</code> initializes <code>VideoCanvas</code> objects for each keypoint of interest. Each corresponds to a <code>canvas</code> in the bento grid.</li>
+<li><code>video = createCapture(VIDEO)</code> starts a live webcam feed.</li>
+<li><code>bodyPose.detectStart(video, gotPoses)</code> initiates pose detection. The callback <code>gotPoses</code> updates the global <code>poses</code> array.</li>
+</ul>
+<p><strong>Draw Loop:</strong></p>
+<ul>
+<li>The <code>draw()</code> function is implicitly called by <code>p5.js</code> at 60fps.</li>
+<li>Each <code>VideoCanvas</code> in <code>canvases</code> calls <code>draw(video, poses)</code> to update the displayed body part snippet.</li>
+<li><code>checkRightEye()</code> is called each frame to determine if the right eye is visible. If yes and no report is generated yet, <code>generateRandomReport()</code> is triggered.</li>
+</ul>
+<p><strong>Report Generation:</strong></p>
+<ul>
+<li><code>generateRandomReport()</code> picks random fictional data (ethnicities, schools, majors, etc.) from predefined arrays. The arrays contain humorous fake data (e.g., “Shinobi,” “Mandalorian,” “Hogwarts” as nationality).</li>
+<li>Uses <code>gsap.to()</code> for text animations, typing out the randomly selected values character by character.</li>
+<li>Once a report is generated, <code>chance-percentage</code> starts flickering through random numbers, simulating an unstable “chance” metric.</li>
+</ul>
+<p><strong>Key Techniques:</strong></p>
+<ol>
+<li>
+<p><strong>Lazy Loading and Performance:</strong></p>
+<ul>
+<li><code>video.elt.setAttribute("loading", "lazy")</code> hints at lazy loading the video element, potentially improving performance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Animation and User Feedback:</strong></p>
+<ul>
+<li><code>gsap</code> is used to animate text, giving a typing-like effect. This makes the data feel dynamically “revealed,” rather than instantly dumped.</li>
+</ul>
+</li>
+<li>
+<p><strong>Separation of Concerns with the <code>VideoCanvas</code> class:</strong></p>
+<ul>
+<li>By encapsulating cropping/drawing logic in a class, my code is cleaner and each body part’s rendering is easily managed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Flicker Effect for Chance Percentage:</strong></p>
+<ul>
+<li>A simple <code>setInterval</code> updates the “chance” percentage randomly every 99ms.</li>
+<li>Short interval updates combined with CSS <code>@keyframes flicker</code> creates a glitchy, unstable feeling.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data from JSON-like arrays:</strong></p>
+<ul>
+<li>Although my code currently contains arrays inline, the logic is structured so it could easily pull from a real JSON file. This design suggests scalability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fallback Logic:</strong></p>
+<ul>
+<li>If the right eye is not detected (<code>confidence &lt;= 0.1</code>), the report is cleared, resetting everything, and <code>??</code> is shown in the chance field. This ensures the experience is dynamic and tied to user presence.</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-the-struggle">4. The Struggle </h2>
+<p>Aside from learning grid and flexbox layouts, two major challenges stood out:</p>
+<ol>
+<li>Pose detection inaccuracies: When keypoints drift, does the score become too erratic? I needed to add some smoothing but not so much that it lost its sense of absurdity.<br>
+<strong>You can find a solution for this in the previous code walkthrough.</strong></li>
+<li>Generating content for the dynamic report that’s both satirical and believable: Choosing the right text and random logic so the content seems plausible yet clearly deviates from common sense.<br>
+<strong>More details about this will appear in the following “Audience” section.</strong></li>
+</ol>
+<p>Emotional struggles also emerged:</p>
+<p>While repeatedly fine-tuning the work’s visual layout, the flickering rate of the scores, and the report’s text, I began to wonder: Am I applying the same thought process to myself—am I rating my own work? This cycle of self-dimensionalization might trap me in an endless pursuit of “perfection.”</p>
+<h2 id="5-the-audience">5. The Audience </h2>
+<blockquote>
+<p>Taste your own reflection, pixel by pixel,<br>
+And what still remains.</p>
+</blockquote>
+<p>I invited five people to try it out.</p>
+<ul>
+<li>As viewers approached the camera and saw the flickering score, some deliberately struck odd poses or tried to maintain a “perfect” frontal stance to get a “better” score. This interaction is precisely what the piece aims to satirize: people unconsciously conforming to data metrics.</li>
+<li>Some viewers stared curiously at the unstable score, trying to discern a pattern; others dismissed it as a trivial gimmick.</li>
+</ul>
+<p><strong>Feedback and Observations:</strong></p>
+<ul>
+<li>One viewer admitted, “I feel like I’m being judged, but I have no idea what the criteria are.” This is exactly the reaction I sought.</li>
+<li>Another joked, “This thing is triggering my anxiety from a year ago!”—once again confirming the resonance of what the piece tries to convey, though the triggering text needs to be fixed and was fixed later on.</li>
+</ul>
+<p>During user testing, I noticed that the initial bento grid layout and the content (which originally reflected the audience’s real-life backgrounds) made some participants distinctly uncomfortable. They reported feeling “broken down” and placed under a lens that was too clear and too fragmented, as if their identities were dissected piece by piece.</p>
+<p><strong>This feedback prompted me to make adjustments:</strong></p>
+<p>First, I abandoned the realistic mode of text generation. I no longer used factual backgrounds, authentic ethnicities, or realistic activity lists to emphasize the “dimensionalizing” edge. Instead, I turned to completely fictional textual content—such as made-up extracurricular activities and fanciful ethnicities or nationalities.</p>
+<p>All these fictional texts are now randomly selected from a pre-written JSON dataset rather than being generated in real-time by a language model (like llama). This approach avoids long loading times and prevents overly specific associations.</p>
+<p>Even though the text became absurd and fictional, I maintained the black-and-white visual style. I didn’t rely on bright colors or overt humor to dilute the discomfort. This way, the overall experience still preserves a certain tension and unease, but shifts from direct “factual dissection” to a more subtle, surreal form of “fictional dimensionalization.”</p>
+<h2 id="6-exhibition">6. Exhibition </h2>
+<p>I haven’t managed to edit a complete video; <strong>I plan to demonstrate it live in class.</strong> However, here’s a rough demo:</p>
+<p><a href="https://youtu.be/3XDww2LYESU">https://youtu.be/3XDww2LYESU</a></p>
+<p>You can try it out yourself here:</p>
+<p><a href="https://n3xta.github.io/fall2024-creative-computing-final/">https://n3xta.github.io/fall2024-creative-computing-final/</a></p>
+<p>Some screenshots:</p>
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/dc1984bda5b272a213fd931ef945982.png">
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/6b8cdedfa3698da4215a01c19fd7e94.png">
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/e4ae9c1a032c97f4f33f682dfc848fa.png">
+<img src="https://raw.githubusercontent.com/n3xta/image-hosting/main/fonts/6f28d6d653778448a9227d4d9c8a2be.png">
+<h2 id="7-the-next-step">7. The Next Step </h2>
+<ul>
+<li>Key Question: After completing this piece, what new aspirations do I have for myself and my work?</li>
+</ul>
+<p>In future versions, I hope to add more interactive dimensions. For instance, I’d like to integrate AI models to generate textual descriptions of the viewer’s posture, making the report even more random and absurdly readable. Perhaps I could incorporate additional data sources—like how long viewers linger, their mouse trajectories, or even background noise levels—further enriching this “absurd data theater.”</p>
+<p>On a technical level, I might experiment with WebGL or shader effects to give the digitization process more visual tension. Artistically, I can apply this logic of “dimensionalization” to different social issues—from education to workplace evaluations and even the “like” mechanisms on social media. Everything can be dissected, amplified, and satirized through data dimensions.</p>
+<p>Most importantly, I’d like to leave viewers with some kind of “souvenir.” For instance, if someone stops in front of the piece for five seconds, I could capture a screenshot and generate a QR code, allowing them to download their own “admissions file.” But this would require server-side functionality, which I haven’t set up yet.</p>
+<p><strong>Regarding the QR code idea:</strong></p>
+<p>I’ve made some attempts, but to continuously capture and generate codes, I’d need a server. So I’m not there yet.</p>
+<p>But also check this out. <a href="https://youtube.com/shorts/R6IDnkJBJNs?feature=share">https://youtube.com/shorts/R6IDnkJBJNs?feature=share</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
